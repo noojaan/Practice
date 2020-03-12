@@ -1,13 +1,24 @@
 #include <iostream>
-using namespace std;
 
-void hello() {
-	cout << "hello";
+int getValueFromUser() 
+{
+	int num{};
+	std::cout << "Enter a integer value: ";
+	std::cin >> num;
+	return num;
 }
 
-int main() {
-	cout << "hello programmers!\n";
-	cout << "Adding one more line here\n";
-	hello();
+void printDouble(int num) 
+{
+	std::cout << "Double of "<< num << " is: " << num*2 << '\n';
+}
+
+
+int main()
+{
+	int a{};
+	a= getValueFromUser();
+	printDouble(a);
+
 	return 0;
 }
