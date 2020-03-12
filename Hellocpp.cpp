@@ -1,24 +1,9 @@
-#include <iostream>
-
-int getValueFromUser() 
-{
-	int num{};
-	std::cout << "Enter a integer value: ";
-	std::cin >> num;
-	return num;
-}
-
-void printDouble(int num) 
-{
-	std::cout << "Double of "<< num << " is: " << num*2 << '\n';
-}
-
+#include "io.h"
 
 int main()
 {
-	int a{};
-	a= getValueFromUser();
-	printDouble(a);
-
+	int a{ readNumber() };
+	int b{ readNumber() };
+	writeAnswer(a + b);
 	return 0;
 }
